@@ -114,8 +114,15 @@ public class Alfred {
 		//
 		// Create the directory structure for the cache and data directories.
 		//
-		cache = edict["alfred_workflow_cache"] as! String
-		data  = edict["alfred_workflow_data"] as! String
+//        print("打印:\(edict["alfred_workflow_cache"])")
+        if edict["alfred_workflow_cache"] != nil {
+            cache = edict["alfred_workflow_cache"] as! String
+        }
+        if edict["alfred_workflow_data"] != nil {
+            data = edict["alfred_workflow_data"] as! String
+        }
+//        cache = (edict["alfred_workflow_cache"] as? String)!
+//        data  = (edict["alfred_workflow_data"] as? String)!
 
 		//
 		// See if the cache directory exists.
