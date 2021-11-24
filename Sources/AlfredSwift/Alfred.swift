@@ -200,7 +200,7 @@ public class Alfred {
 	//						XML String for passing back to Alfred.
 	//
 	public func ToXML() -> String {
-		var newxml: String = "<items>"
+		var newxml: String = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<items>"
 
 		for result in results {
 			newxml += "<item uidid='\(result.Uid)' valid='\(result.Valid)' autocomplete='\(result.Auto)' type='\(result.Rtype)'><arg>\(result.Arg)</arg><title>\(result.Title)</title><sub>\(result.Sub)</sub><icon>\(result.Icon)</icon></item>"
