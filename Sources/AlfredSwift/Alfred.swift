@@ -198,12 +198,11 @@ public class Alfred {
 	//
 	// Description:	This class function takes the result array and makes it into an
 	//						XML String for passing back to Alfred.
-	//
 	public func ToXML() -> String {
 		var newxml: String = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<items>"
 
 		for result in results {
-			newxml += "<item uidid='\(result.Uid)' valid='\(result.Valid)' autocomplete='\(result.Auto)' type='\(result.Rtype)'><arg>\(result.Arg)</arg><title>\(result.Title)</title><sub>\(result.Sub)</sub><icon>\(result.Icon)</icon></item>"
+			newxml += "<item uid='\(result.Uid)' valid='\(result.Valid)' autocomplete='\(result.Auto)' type='\(result.Rtype)' arg='\(result.Arg)'><title>\(result.Title)</title><subtitle>\(result.Sub)</subtitle><icon>\(result.Icon)</icon></item>"
 		}
 
 		//
